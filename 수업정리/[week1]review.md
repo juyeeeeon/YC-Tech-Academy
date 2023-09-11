@@ -29,7 +29,7 @@
  * **Use Nesting on Endpoints to Show Relationships**
     * You should avoid nesting that is more than 3 levels deep as this can make the API less elegant and readable.
    ```
-    EX) https://mysite.com/posts/postId/comments
+   EX) https://mysite.com/posts/postId/comments
    ```
 
  * **Use Filtering, Sorting, and Pagination to Retrieve the Data Requested**   
@@ -39,8 +39,8 @@
 
  * **Use SSL for Security**   
    ```
-    EX) https://mysite.com/posts runs on SSL.   
-        http://mysite.com/posts does not run on SSL.
+   EX) https://mysite.com/posts runs on SSL.   
+       http://mysite.com/posts does not run on SSL.
    ```
 
  * **Be Clear with Versioning**   
