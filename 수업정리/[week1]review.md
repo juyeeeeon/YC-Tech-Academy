@@ -2,17 +2,21 @@
 
 
 > ## REST API 설계 [[참고]](https://www.freecodecamp.org/news/rest-api-best-practices-rest-endpoint-design-examples/)
- * Use JSON as the Format for Sending and Receiving Data
+ * **Use JSON as the Format for Sending and Receiving Data**
 
- * Use Nouns Instead of Verbs in Endpoints
+ * **Use Nouns Instead of Verbs in Endpoints**
     * HTTP methods (GET, POST, PUT, PATCH, and DELETE) are already in verb form for performing basic CRUD (Create, Read, Update, Delete) operations.
-    * EX) http://mysite.com/getPosts (X)   
-    -> https://mysite.com/posts (O)
- * Name Collections with Plural Nouns
-    * EX) http://mysite.com/post/123 (X)   
-    -> https://mysite.com/posts/123 (O)
+   ```  
+   EX) http://mysite.com/getPosts (X)   
+      -> https://mysite.com/posts (O)  
+   ```
 
- * Use Status Codes in Error Handling
+ * **Name Collections with Plural Nouns**
+   ```
+   EX) http://mysite.com/post/123 (X)   
+      -> https://mysite.com/posts/123 (O)
+   ```
+ * **Use Status Codes in Error Handling**
 
     |STATUS CODE RANGE|MEANING|
     |:----------------:|:-----:|
@@ -20,22 +24,32 @@
     | 300 – 399 | Redirects |
     | 400 – 499 | Client-side errors |
     | 500 – 599 | Server-side errors |
- * Use Nesting on Endpoints to Show Relationships
+
+
+ * **Use Nesting on Endpoints to Show Relationships**
     * You should avoid nesting that is more than 3 levels deep as this can make the API less elegant and readable.
-    * EX) https://mysite.com/posts/postId/comments
+   ```
+    EX) https://mysite.com/posts/postId/comments
+   ```
 
- * Use Filtering, Sorting, and Pagination to Retrieve the Data Requested   
-    * EX) https://mysite.com/posts?tags=javascript
+ * **Use Filtering, Sorting, and Pagination to Retrieve the Data Requested**   
+   ```
+   EX) https://mysite.com/posts?tags=javascript
+   ```
 
- * Use SSL for Security   
-    * EX) https://mysite.com/posts runs on SSL.   
-http://mysite.com/posts does not run on SSL.
+ * **Use SSL for Security**   
+   ```
+    EX) https://mysite.com/posts runs on SSL.   
+        http://mysite.com/posts does not run on SSL.
+   ```
 
- * Be Clear with Versioning   
-    * EX) https://mysite.com/v1/ for version 1  
-https://mysite.com/v2 for version 2
+ * **Be Clear with Versioning**   
+   ```
+   EX) https://mysite.com/v1/ for version 1  
+       https://mysite.com/v2 for version 2
+   ```
 
- * Provide Accurate API Documentation    
+ * **Provide Accurate API Documentation**    
     * The documentation should contain:   
         1. relevant endpoints of the API
         2. example requests of the endpoints   
@@ -48,12 +62,12 @@ https://mysite.com/v2 for version 2
 
 
 > ## Controller 작성 & 설계
-1. Model과 View 사이를 이어주는 인터페이스 역할. 
+1. **Model과 View 사이를 이어주는 인터페이스 역할.**   
 즉, Model이 데이터를 어떻게 처리할지 알려주는 역할을 수행. 사용자로부터 View에 요청이 있으면 Controller는 해당 업무를 수행하는 Model을 호출하고 Model이 업무를 모두
 수행하면 다시 결과를 View에 전달하는 역할을 함.
 <br>
 <br>
-* @Controller 와 @RestController의 차이
+* **@Controller 와 @RestController의 차이**
 
 |@Controller|@RestController|
 |:----------:|:------------:|
