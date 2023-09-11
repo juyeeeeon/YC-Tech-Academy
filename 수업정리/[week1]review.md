@@ -1,4 +1,8 @@
-# [WEEK 1] REVIEW
+# [WEEK 1] REVIEW 
+
+#### YC Tech Academy
+---
+---
 
 
 > ## REST API 설계 [[참고]](https://www.freecodecamp.org/news/rest-api-best-practices-rest-endpoint-design-examples/)

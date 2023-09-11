@@ -1,5 +1,9 @@
 # [WEEK 2] PREVIEW
 
+#### YC Tech Academy
+---
+---
+
 ## Bean 주입
 * Spring bean은 Spring에 의해 생성되고 관리되는 객체.    
 * Spring은 Bean을 생성 및 관리를 위해 스프링 컨테이너를 제공한다.
