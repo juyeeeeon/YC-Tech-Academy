@@ -67,6 +67,7 @@
 수행하면 다시 결과를 View에 전달하는 역할을 함.
 <br>
 <br>
+
 * **@Controller 와 @RestController의 차이**
 
 |@Controller|@RestController|
