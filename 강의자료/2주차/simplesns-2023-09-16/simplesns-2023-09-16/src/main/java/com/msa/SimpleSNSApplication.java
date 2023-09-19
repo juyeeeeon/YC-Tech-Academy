@@ -1,14 +1,13 @@
-package com.example.sns;
+package com.msa;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.context.annotation.Bean;
 
 @SpringBootApplication
-public class SnsApplication {
+public class SimpleSNSApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(SnsApplication.class, args);
+		SpringApplication.run(SimpleSNSApplication.class, args);
 	}
 
 }
