@@ -7,7 +7,7 @@
 # RDBMS
 
 ## 테이블들의 연관 관계
-### SQL - Unique Key
+### SQL - Unique Key [[참고]](https://www.tutorialspoint.com/sql/sql-unique-key.htm)
 * 테이블의 열에서 중복된 값을 허용하지 않는다.
 * primary key와 유사하지만, unique key는 NULL값을 허용한다.
 * 테이블에서 여러 개 생성 가능하다.
@@ -32,7 +32,7 @@ CREATE TABLE CUSTOMERS (
 );
 ```
 
-### SQL - Primary Key (기본 키)
+### SQL - Primary Key (기본 키) [[참고]](https://www.tutorialspoint.com/sql/sql-primary-key.htm)
 * 각 행을 구분하는 유일한 열이다.
 * 값의 중복을 허용하지 않는다.
 * 즉, 식별키이다.
@@ -70,7 +70,7 @@ CREATE TABLE CUSTOMERS (
 |NULL 허용하지 않음|NULL 허용 가능|
 |데이터 무결성 보장|데이터 무결성 보장(NULL은 여러 개 존재 가능)|
 
-### SQL - Foreign Key
+### SQL - Foreign Key (외래 키) [[참고]](https://www.tutorialspoint.com/sql/sql-foreign-key.htm)
 * 두 테이블 사이의 관계를 연결해줌
 * 데이터의 무결성을 보장해주는 역할
 * 외래 키가 설정된 열은 꼭 다른 테이블의 기본 키와 연결됨
@@ -101,7 +101,7 @@ CREATE TABLE CUSTOMERS(
 
 ## indexing
 
-### SQL - Indexes
+### SQL - Indexes [[참고]](https://www.tutorialspoint.com/sql/sql-indexes.htm)
 * 테이블의 조회를 빠르게 도와주는 자료구조
 * 데이터의 위치를 빠르게 찾아주는 역할
 * 책 뒷편의 색인과 같은 역할
@@ -114,7 +114,7 @@ on table_name (column_name);
 ```
 
 
-### SQL - Create Index
+### SQL - Create Index [[참고]](https://www.tutorialspoint.com/sql/sql-create-index.htm)
 * index 생성
 ```SQL
 CREATE INDEX index_name 
@@ -141,7 +141,7 @@ CREATE TABLE CUSTOMERS(
 CREATE INDEX index_name ON CUSTOMERS(NAME);
 ```
 
-### SQL - Drop Index
+### SQL - Drop Index [[참고]](https://www.tutorialspoint.com/sql/sql-drop-index.htm)
 * index 삭제
 
 ```SQL
@@ -157,7 +157,7 @@ DROP INDEX index_name ON table_name;
 DROP INDEX INDEX_NAME ON CUSTOMERS;
 ```
 
-### SQL - Show Indexes
+### SQL - Show Indexes [[참고]](https://www.tutorialspoint.com/sql/sql-show-indexes.htm)
 * index 조회
 
 ```SQL
@@ -170,7 +170,7 @@ SHOW INDEX FROM table_name;
 SHOW INDEX FROM CUSTOMERS;
 ```
 
-### SQL - Unique Indexes
+### SQL - Unique Indexes [[참고]](https://www.tutorialspoint.com/sql/sql-unique-index.htm)
 * index가 걸려있는 열에 중복될 수 없는 유일한 값만을 보장한다.
 * NULL 허용한다.
 
@@ -191,7 +191,7 @@ CREATE UNIQUE INDEX UNIQUE_ID ON CUSTOMERS (NAME);
 ```
 
 ## Transaction
-### SQL - Transactions
+### SQL - Transactions [[참고]](https://www.tutorialspoint.com/sql/sql-transactions.htm)
 * 데이터베이스의 상태를 변화시키기 위해 수행하는 작업단위
 
 #### Transactions의 특징
@@ -201,7 +201,7 @@ CREATE UNIQUE INDEX UNIQUE_ID ON CUSTOMERS (NAME);
 - 지속성(Durability) : transaction이 수행되면 그 결과가 반영되어야 한다.
 
 
-### Spring Data JPA 활용
+### Spring Data JPA 활용 [[참고]](https://www.baeldung.com/learn-jpa-hibernate)
 * Spring Data JPA는 Java 기반의 애플리케이션에서 데이터베이스와 상호작용하는 데 도움을 주는 Spring Framework의 일부이다.
 * JPA는 Java Persistence API의 약자로, 객체 관계 매핑(ORM, Object-Relational Mapping)을 지원하는 Java 표준 스펙 중 하나
 
