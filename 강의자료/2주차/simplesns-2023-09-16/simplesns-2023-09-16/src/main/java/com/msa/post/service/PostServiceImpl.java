@@ -8,6 +8,7 @@ import org.springframework.stereotype.Service;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class PostServiceImpl implements PostService {
@@ -27,8 +28,8 @@ public class PostServiceImpl implements PostService {
 	}
 
 	@Override
-	public Post getPost(Long id) {
-		return null;
+	public Optional<Post> getPost(Long id) {
+		return postRepository.findById(id);
 	}
 
 	@Override
@@ -42,6 +43,11 @@ public class PostServiceImpl implements PostService {
 				.stream()
 				.sorted((o1, o2) -> o2.getCreatedAt().compareTo(o1.getCreatedAt()))
 				.toList();
+	}
+
+	@Override
+	public void deletePost(Long id) {
+		postRepository.deleteById(id);
 	}
 	
 }

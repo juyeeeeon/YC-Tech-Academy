@@ -4,7 +4,7 @@ import com.msa.post.domain.Post;
 import com.msa.post.repository.PostRepository;
 import com.msa.post.service.PostService;
 import com.msa.post.service.PostServiceImpl;
-import org.junit.jupiter.api.Assertions;
+import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -62,5 +62,17 @@ public class PostServiceTests {
     private boolean isSortedDescending(List<Post> items) {
         return IntStream.range(0, items.size() - 1)
                 .noneMatch(i -> items.get(i).getCreatedAt().isBefore(items.get(i + 1).getCreatedAt()));
+    }
+
+    @Test
+    public void test_get_post_by_id() {
+        postService.getPost(1L);
+        verify(postRepository, atLeastOnce()).findById(anyLong());
+    }
+
+    @Test
+    public void test_delete_post_by_id() {
+        postService.deletePost(1L);
+        verify(postRepository, atLeastOnce()).deleteById(anyLong());
     }
 }

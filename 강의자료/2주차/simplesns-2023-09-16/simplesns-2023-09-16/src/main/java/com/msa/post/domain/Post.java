@@ -1,5 +1,6 @@
 package com.msa.post.domain;
 
+import com.msa.post.controller.dto.PostDto;
 import lombok.Getter;
 
 import java.time.LocalDate;
@@ -57,6 +58,10 @@ public class Post {
 		this.title = title;
 		this.content = content;
 		this.createdAt = createdAt;
+	}
+
+	public PostDto convert2DTO() {
+		return new PostDto(this.getTitle(), this.getContent());
 	}
 
 
