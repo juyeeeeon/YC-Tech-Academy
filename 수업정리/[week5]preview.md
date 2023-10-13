@@ -106,6 +106,8 @@ client_secret : RFC 표준상 필수는 아니지만, Client Secret이 발급된
 
 이후 Resource Owner가 Resource Server의 리소스가 필요한 기능을 Client에 요청한다. Client는 위 과정에서 발급받고 저장해둔 Resource Owner의 Access Token을 사용하여 제한된 리소스에 접근하고, Resource Owner에게 자사의 서비스를 제공한다.
 
+<br>
+<br>
 
 <b> * Implicit Grant / 암묵적 승인 방식</b>
 ![암묵적 승인 방식](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FtgjgS%2Fbtr5fNuAYEs%2Fgwf8HLqsOeuvQqAV1vJ000%2Fimg.jpg)
