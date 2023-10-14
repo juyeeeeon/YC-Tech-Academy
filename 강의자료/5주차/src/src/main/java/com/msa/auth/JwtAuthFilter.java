@@ -1,6 +1,8 @@
 package com.msa.auth;
-import com.msa.member.domain.RefreshToken;
-import com.msa.member.repository.RefreshTokenRepository;
+
+import com.msa.auth.domain.JwtCode;
+import com.msa.user.domain.RefreshToken;
+import com.msa.user.repository.RefreshTokenRepository;
 import io.jsonwebtoken.Claims;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
