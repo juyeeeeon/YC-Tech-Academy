@@ -2,19 +2,19 @@ package com.msa.post.service;
 
 import com.msa.post.domain.Post;
 import com.msa.post.repository.PostRepository;
+import lombok.RequiredArgsConstructor;
+import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Service;
 
+import java.time.Duration;
 import java.util.*;
 
 @Service
+@RequiredArgsConstructor
 public class PostServiceImpl implements PostService {
 
 	private final PostRepository postRepository;
-
-	public PostServiceImpl(PostRepository postRepository) {
-		this.postRepository = postRepository;
-	}
-
+	private final RedisTemplate<String, Post> postRedisTemplate;
 
 	@Override
 	public Post addPost(String title, String content) {
@@ -25,7 +25,26 @@ public class PostServiceImpl implements PostService {
 
 	@Override
 	public Optional<Post> getPost(long id) {
-		return postRepository.findById(id);
+
+		Post cachedPost = postRedisTemplate.opsForValue()
+				.getAndExpire(String.valueOf(id), Duration.ofMinutes(3));
+
+		if (cachedPost != null) {
+			return Optional.of(cachedPost);
+		}
+
+
+		/*Optional<Post> findPost = postRepository.findById(id);
+		postRedisTemplate.opsForValue().set(String.valueOf(findPost.get().getId()), findPost.get());
+		return findPost;
+		*/
+
+		return postRepository.findById(id)
+				.map(post -> {
+					postRedisTemplate.opsForValue().set(String.valueOf(id), post);
+					return post;
+				} );
+
 	}
 
 	@Override
