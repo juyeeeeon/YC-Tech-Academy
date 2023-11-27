@@ -38,7 +38,7 @@ Redis는 오픈 소스의 in-memory data structure store 이다. 주로 데이�
 <br>
 
 
->> ### 데이터 구조 저장소 (Redis as an in-memory data structure store)
+> ### 데이터 구조 저장소 (Redis as an in-memory data structure store)
 
 ### 데이터 저장 및 검색
 byte arrays와 유사하게 Redis 문자열은 text, serialized objects, counter values 및 binary arrays을 포함하여 sequences of bytes을 저장한다. 다음 예에서는 문자열 값을 설정하고 가져오는 방법을 보여준다.
@@ -80,7 +80,7 @@ SCAN은 커서 위치를 반환하므로 커서 값 0에 도달할 때까지 다
 <br>
 <br>
 
->> ## 데이터 타입([Data Types](https://redis.io/docs/data-types/))
+> ## 데이터 타입([Data Types](https://redis.io/docs/data-types/))
 ### Strings
 
 ### JSON
@@ -97,7 +97,7 @@ SCAN은 커서 위치를 반환하므로 커서 값 0에 도달할 때까지 다
 <br>
 <br>
 
->> ## 데이터와 상호 작용([Interact with data](https://redis.io/docs/interact/))
+> ## 데이터와 상호 작용([Interact with data](https://redis.io/docs/interact/))
 ### 검색 및 쿼리
 
 <br>
